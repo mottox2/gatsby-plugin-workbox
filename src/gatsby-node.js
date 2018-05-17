@@ -14,6 +14,8 @@ exports.createPages = ({ boundActionCreators }) => {
 }
 
 exports.onPostBuild = (args, pluginOptions) => {
+  delete pluginOptions.plugins
+
   const options = {
     cacheId: 'gatsby-plugin-workbox',
     globDirectory: 'public',
@@ -22,9 +24,10 @@ exports.onPostBuild = (args, pluginOptions) => {
     ],
     navigateFallback: `/offline-plugin-app-shell-fallback/index.html`,
     swDest: 'public/sw.js',
+    clientsClaim: true,
   }
 
-  // const combinedOptions = _.defaults(pluginOptions, options)
+  const combinedOptions = _.defaults(pluginOptions, options)
 
   return workboxBuild.generateSW(options)
 }
