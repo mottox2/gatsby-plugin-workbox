@@ -11,10 +11,12 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-react": "^6.24.1"
+    "babel-preset-react": "^6.24.1",
+    "cross-env": "^5.1.5"
   },
   "scripts": {
     "build": "babel src --out-dir .",
+    "prepublish": "cross-env NODE_ENV=production npm run build",
     "watch": "babel -w src --out-dir ."
   },
   "keywords": [
