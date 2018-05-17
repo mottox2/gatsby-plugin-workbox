@@ -10,7 +10,8 @@
     "url": "https://github.com/mottox2/gatsby-plugin-workbox/issues"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0"
+    "babel-cli": "^6.26.0",
+    "babel-preset-react": "^6.24.1"
   },
   "scripts": {
     "build": "babel src --out-dir .",
@@ -26,6 +27,7 @@
   },
   "dependencies": {
     "lodash": "^4.17.10",
+    "react": "^16.3.2",
     "slash": "^2.0.0",
     "workbox-build": "^3.2.0"
   }
