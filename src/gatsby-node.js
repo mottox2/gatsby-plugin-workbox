@@ -1,4 +1,3 @@
-
 const workboxBuild = require('workbox-build')
 const path = require(`path`)
 const slash = require(`slash`)
@@ -13,7 +12,6 @@ exports.createPages = ({ boundActionCreators }) => {
     })
   }
 }
-
 
 exports.onPostBuild = (args, pluginOptions) => {
   const options = {
