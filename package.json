@@ -4,5 +4,12 @@
   "main": "index.js",
   "license": "MIT",
   "repository": "https://github.com/mottox2/gatsby-plugin-workbox.git",
-  "author": "mottox2 <y.mottox2@gmail.com>"
+  "author": "mottox2 <y.mottox2@gmail.com>",
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
+  },
+  "scripts": {
+    "build": "babel src --out-dir .",
+    "watch": "babel -w src --out-dir ."
+  }
 }
