@@ -2,15 +2,11 @@
 const workboxBuild = require('workbox-build')
 
 exports.onPostBuild = (args, pluginOptions) => {
-  return workboxBuild.generateSW({
+  workboxBuild.generateSW({
+    cacheId: 'gatsby-plugin-workbox',
     globDirectory: 'public',
     globPatterns: [
-      '**/*.{woff2}',
-      'commons-*js',
-      'app-*js',
-      'index.html',
-      'manifest.json',
-      'manifest.webmanifest',
+      '**\/*.{html,json,js,css}',
     ],
     swDest: 'public/sw.js',
   })
