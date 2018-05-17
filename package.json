@@ -1,7 +1,7 @@
 {
   "name": "gatsby-plugin-workbox",
   "description": "Gatsby plugin which provides service worker by Workbox",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "index.js",
   "license": "MIT",
   "repository": "https://github.com/mottox2/gatsby-plugin-workbox.git",
