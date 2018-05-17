@@ -11,5 +11,8 @@
   "scripts": {
     "build": "babel src --out-dir .",
     "watch": "babel -w src --out-dir ."
+  },
+  "dependencies": {
+    "workbox-build": "^3.2.0"
   }
 }
