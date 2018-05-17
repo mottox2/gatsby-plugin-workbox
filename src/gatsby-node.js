@@ -24,7 +24,7 @@ exports.onPostBuild = (args, pluginOptions) => {
     swDest: 'public/sw.js',
   }
 
-  const combinedOptions = _.defaults(pluginOptions, options)
+  // const combinedOptions = _.defaults(pluginOptions, options)
 
-  return workboxBuild.generateSW(combinedOptions)
+  return workboxBuild.generateSW(options)
 }
