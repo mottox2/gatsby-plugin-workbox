@@ -16,7 +16,7 @@ exports.createPages = ({ boundActionCreators }) => {
 exports.onPostBuild = (args, pluginOptions) => {
   delete pluginOptions.plugins
 
-  const options = {
+  const defaultOptions = {
     cacheId: 'gatsby-plugin-workbox',
     globDirectory: 'public',
     globPatterns: [
@@ -27,7 +27,7 @@ exports.onPostBuild = (args, pluginOptions) => {
     clientsClaim: true,
   }
 
-  const combinedOptions = _.defaults(pluginOptions, options)
+  const combinedOptions = _.assign(defaultOptions, pluginOptions)
 
-  return workboxBuild.generateSW(options)
+  return workboxBuild.generateSW(combinedOptions)
 }
