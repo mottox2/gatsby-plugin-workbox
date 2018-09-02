@@ -1,5 +1,9 @@
 # gatsby-plugin-workbox
 
+This plugin is deprecated because gatsby-plugin-office now use workbox to generate sw.js.
+
+https://github.com/gatsbyjs/gatsby/pull/7605
+
 ## Install
 
 via npm
